@@ -1,0 +1,45 @@
+@import "./fonts";
+@import "./variables";
+@import "./views/home.scss";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html {
+  font-family: "Overpass", sans-serif;
+  background-color: $dark;
+  color: $light;
+}
+
+h1 {
+  font-size: 46px;
+  &.subtitle {
+    font-size: 25px;
+  }
+}
+h2 {
+  font-size: 32px;
+  &.subtitle {
+    font-size: 18px;
+  }
+}
+h3 {
+  &.subtitle {
+    font-size: 10px;
+  }
+}
+h4 {
+  &.subtitle {
+    font-size: 8px;
+  }
+}
+.subtitle {
+  font-family: "Roboto Slab", serif;
+  font-weight: 200;
+}
