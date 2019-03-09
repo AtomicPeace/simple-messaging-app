@@ -1,9 +1,11 @@
 
 const input = document.getElementById("message-input-box");
 const sendButton = document.getElementById("message-send-button");
+const {ipcRenderer} = require('electron');
 
-sendButton.addEventListener('click', (e)=>{
-    alert(input.value);
+
+ipcRenderer.on('asynchronous-reply', (e,messageFromServer)=>{
+   console.log('Message from server: ' + JSON.stringify(messageFromServer))
 });
 
 input.addEventListener('keyup', (event)=>{
@@ -12,4 +14,9 @@ input.addEventListener('keyup', (event)=>{
         sendButton.click();
     }
     
+});
+
+sendButton.addEventListener('click', (e)=>{
+    console.log({payload: input.value});
+    ipcRenderer.send('asynchronous-message',  {payload: input.value});
 });
