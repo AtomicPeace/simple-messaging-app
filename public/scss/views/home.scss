@@ -20,13 +20,26 @@
     height: 100%;
     width: 100%;
   }
-  & > .message {
-    &-wrap {
-      background-color: $card-background;
-    }
-    &-input {
-      border: transparent;
-      width: 100%;
-    }
+}
+.message {
+  &-wrap {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin: -7px;
+    background-color: $card-background;
+  }
+  &-input {
+    border: transparent;
+    width: 100%;
+    font-size: 24px;
+
+  }
+  &-send-button {
+    font-size: 24px;
+
+    background-color: $accent;
+    color: $light;
+    border: none;
   }
 }
